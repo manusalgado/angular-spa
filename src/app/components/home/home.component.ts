@@ -6,6 +6,6 @@ import { Component } from '@angular/core'
 })
 export class HomeComponent {
 
-    title:string = "Comic App"
+    title:string = "Angular SPA"
 
 }
