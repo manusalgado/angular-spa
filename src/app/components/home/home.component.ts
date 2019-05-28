@@ -6,6 +6,6 @@ import { Component } from '@angular/core'
 })
 export class HomeComponent {
 
-    title:string = "Home Component"
+    title:string = "Comic App"
 
 }
