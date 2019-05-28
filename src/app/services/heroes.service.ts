@@ -60,11 +60,24 @@ export class HeroesService {
     }
 
     getHeroes(){
-        return this.heroes
+      return this.heroes
     }
 
     getHeroe( idx:number ){
       return this.heroes[idx]
+    }
+
+    searchHeroes( termin:string ):Heroe[] {
+      let heroesArr:Heroe[] = []
+      termin = termin.toLocaleLowerCase()
+
+      for ( let heroe of this.heroes ) {
+        let name = heroe.nombre.toLocaleLowerCase()
+        if( name.indexOf( termin ) >= 0 ){
+          heroesArr.push( heroe )
+        }
+      }
+      return heroesArr
     }
 }
 
